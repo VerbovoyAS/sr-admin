@@ -96,7 +96,7 @@ if($_GET['url'] == ''){
                        
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/ListSrv/">
+                        <a class="nav-link" href="/Listsrv">
                             <img src="/frontend/include/images/icon/align-justify.svg" width="24" height="24">
                             List
                         </a>
