@@ -1,5 +1,4 @@
 <?php 
-
     class ListSrv extends Controller {
         
         public function index($type = '') {
