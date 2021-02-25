@@ -2,8 +2,8 @@
         </div>
         </div>
 
-    <script src="http://localhost/frontend/include/js/popper.min.js"></script>
-    <script src="http://localhost/frontend/include/js/bootstrap.min.js"></script>
+    <script src="/frontend/include/js/popper.min.js"></script>
+    <script src="/frontend/include/js/bootstrap.min.js"></script>
     
     <!-- JS for SW popover -->
     <script>
