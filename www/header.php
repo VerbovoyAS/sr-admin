@@ -132,7 +132,7 @@ if($_GET['url'] == ''){
                     <?php if(strripos($_GET['url'], 'wiki') !== false):?>
                         <a href="/Wiki/add" class="btn btn-success">Add</a>
                     <?php elseif(strripos($_GET['url'], 'listsrv') !== false):?>
-                        <a href="/ListSRV/add" class="btn btn-success">Add</a>    
+                        <a href="/Listsrv/add" class="btn btn-success">Add</a>    
                     <?php endif;?>
                     
                 </div>
