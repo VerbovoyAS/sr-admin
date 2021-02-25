@@ -50,60 +50,60 @@ if($_GET['url'] == ''){
             
             <nav id="sidebarMenu" class="col-md-2 col-lg-2 d-md-block bg-light sidebar collapse">
                 <div class="text-center">
-                    <img src="http://localhost/frontend/include/images/icon/person.png" alt="..." class="rounded-circle w-25 m-3">         
+                    <img src="/frontend/include/images/icon/person.png" alt="..." class="rounded-circle w-25 m-3">         
                     <h3>Привет Юзер</h3> 
                 </div>
                 <div class="sidebar-sticky pt-2">
                     <ul class="nav flex-column">
                     <li class="nav-item">
                         <a class="nav-link active" href="/">
-                            <img src="http://localhost/frontend/include/images/icon/dashboard.svg" width="24" height="24">
+                            <img src="/frontend/include/images/icon/dashboard.svg" width="24" height="24">
                             Dashboard
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="http://localhost/Wiki/">
-                            <img src="http://localhost/frontend/include/images/icon/lock.svg" width="24" height="24">
+                        <a class="nav-link" href="/Wiki/">
+                            <img src="/frontend/include/images/icon/lock.svg" width="24" height="24">
                             Wiki
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="http://localhost/Network/" role="button" aria-haspopup="true" aria-expanded="false">
-                            <img src="http://localhost/frontend/include/images/icon/globe.svg" width="24" height="24">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/Network/" role="button" aria-haspopup="true" aria-expanded="false">
+                            <img src="/frontend/include/images/icon/globe.svg" width="24" height="24">
                             Network
                         </a>
                         <ul class="nav-item">
                             <li class="nav">
-                                <a class="nav-link" href="http://localhost/Network/block/A/">Block A</a>
+                                <a class="nav-link" href="/Network/block/A/">Block A</a>
                             </li>
                             <li class="nav">
-                                <a class="nav-link" href="http://localhost/Network/block/B/">Block B</a>
+                                <a class="nav-link" href="/Network/block/B/">Block B</a>
                             </li>
                             <li class="nav">
-                                <a class="nav-link" href="http://localhost/Network/block/V/">Block V</a>
+                                <a class="nav-link" href="/Network/block/V/">Block V</a>
                             </li>
                             <li class="nav">
-                                <a class="nav-link" href="http://localhost/Network/block/G/">Block G</a>
+                                <a class="nav-link" href="/Network/block/G/">Block G</a>
                             </li>
                             <li class="nav">
-                                <a class="nav-link" href="http://localhost/Network/block/D/">Block D</a>
+                                <a class="nav-link" href="/Network/block/D/">Block D</a>
                             </li>
                             <hr>
                             <li class="nav">
-                                <a class="nav-link" href="http://localhost/Network/">All network</a>
+                                <a class="nav-link" href="/Network/">All network</a>
                             </li>
                         </ul>
                        
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="http://localhost/ListSrv/">
-                            <img src="http://localhost/frontend/include/images/icon/align-justify.svg" width="24" height="24">
+                        <a class="nav-link" href="/ListSrv/">
+                            <img src="/frontend/include/images/icon/align-justify.svg" width="24" height="24">
                             List
                         </a>
                     </li>
                     <li >
-                        <a class="nav-link" href="http://localhost/map">
-                            <img src="http://localhost/frontend/include/images/icon/map.svg" width="24" height="24">
+                        <a class="nav-link" href="/map">
+                            <img src="/frontend/include/images/icon/map.svg" width="24" height="24">
                             Map Network
                         </a>
                         
@@ -115,8 +115,8 @@ if($_GET['url'] == ''){
                        
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="http://localhost/task">
-                            <img src="http://localhost/frontend/include/images/icon/check-square.svg" width="24" height="24"> 
+                        <a class="nav-link" href="/task">
+                            <img src="/frontend/include/images/icon/check-square.svg" width="24" height="24"> 
                             Task's
                         </a>
                     </li>

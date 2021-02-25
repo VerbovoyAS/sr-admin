@@ -66,7 +66,7 @@ $_db = DB::getInstanse();
       
         var mess = 'OK';
         $.ajax({
-            url: 'http://localhost/ajax/addWiki', 
+            url: '/ajax/addWiki', 
             type: 'POST',
             cache: false,
             data: {'name' :name, 'host' :host, 'login' : login, 'pass' : pass, 'category' :category},

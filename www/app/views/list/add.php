@@ -62,7 +62,7 @@ $_db = DB::getInstanse();
       
         var mess = 'OK';
         $.ajax({
-            url: 'http://localhost/ajax/addList', 
+            url: '/ajax/addList', 
             type: 'POST',
             cache: false,
             data: {'name' :name, 'vlan' :vlan, 'ip' : ip, 'comment' : comment, 'category' :category},

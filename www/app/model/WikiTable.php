@@ -29,7 +29,7 @@
                                 <td>{$link->login}</td>
                                 <td>{$link->pass}</td>
                                 <td>
-                                    <a href='http://localhost/wiki/edit?action=edit&id={$link->id}'>Edit</a>
+                                    <a href='/wiki/edit?action=edit&id={$link->id}'>Edit</a>
                                     | <a href='?action=delete&id={$link->id}' onclick='return confirm(\"Вы дейстиветельно хотите удалить - $link->name\")'>del</a>
                                 </td>
                                 
@@ -59,7 +59,7 @@
                     
                     foreach ($res1 as $btn){
                         $navBtn .=  " <li class='nav-item mb-2 mr-2'>
-                                        <a class='nav-link btn btn-outline-primary' href='http://localhost/Wiki/Category/{$btn->categoty}'>{$btn->categoty}</a>
+                                        <a class='nav-link btn btn-outline-primary' href='/Wiki/Category/{$btn->categoty}'>{$btn->categoty}</a>
                                     </li>";
                     }
 

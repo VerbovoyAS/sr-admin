@@ -24,7 +24,7 @@
                             <td>{$el->Name}</td> 
                             <td>{$el->IP}</td>
                             <td>{$el->commentary}</td>
-                            <td><a href='http://localhost/Network/edit?action=edit&id={$el->id}'>Edit</a></td>
+                            <td><a href='/Network/edit?action=edit&id={$el->id}'>Edit</a></td>
                         </tr>
                         ";
                 }
@@ -118,7 +118,7 @@
                         $l = ($i == 0) ? '': 'SW-'.$i;
                         // Формируем кнопки
                         $nav .= " <li class='nav-item mb-2 mr-2'>
-                                    <a class='nav-link btn btn-outline-primary' href='http://localhost/Network/block/{$this->dbQuery[0]->Block}/{$l}'>SW-{$n}</a>
+                                    <a class='nav-link btn btn-outline-primary' href='/Network/block/{$this->dbQuery[0]->Block}/{$l}'>SW-{$n}</a>
                                 </li>";
                     }
                     $swNav = "

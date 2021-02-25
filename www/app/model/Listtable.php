@@ -29,7 +29,7 @@
                                 <td>{$link->ip}</td>
                                 <td>{$link->comment}</td>
                                 <td>
-                                <a href='http://localhost/ListSrv/edit?action=edit&id={$link->id}'>Edit</a>
+                                <a href='/ListSrv/edit?action=edit&id={$link->id}'>Edit</a>
                                 | <a href='?action=delete&id={$link->id}' onclick='return confirm(\"Вы дейстиветельно хотите удалить - $link->name\")'>del</a> 
                                 </td>
                             </tr>
@@ -60,7 +60,7 @@
                     
                     foreach ($res1 as $btn){
                         $navBtn .=  " <li class='nav-item mb-2 mr-2'>
-                                        <a class='nav-link btn btn-outline-primary' href='http://localhost/ListSrv/Category/{$btn->cat}'>{$btn->cat}</a>
+                                        <a class='nav-link btn btn-outline-primary' href='/ListSrv/Category/{$btn->cat}'>{$btn->cat}</a>
                                     </li>";
                     }
 

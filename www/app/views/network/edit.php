@@ -91,7 +91,7 @@ if(isset($_GET['action']) and $_GET['action'] == "edit"){
         var id = <?=$res[0]->id?>;
         var mess = 'OK';
         $.ajax({
-            url: 'http://localhost/ajax/editNetwork', 
+            url: '/ajax/editNetwork', 
             type: 'POST',
             cache: false,
             data: {'block' :block, 'sw' :sw, 'port' : port, 'pp' : pp, 'location' :location, 'type':type, 'name':name, 'ip':ip, 'commentary':commentary, 'id':id},

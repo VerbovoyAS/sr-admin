@@ -68,7 +68,7 @@ if(isset($_GET['action']) and $_GET['action'] == "edit"){
         var id = <?=$res[0]->id?>;
         var mess = 'OK';
         $.ajax({
-            url: 'http://localhost/ajax/editList', 
+            url: '/ajax/editList', 
             type: 'POST',
             cache: false,
             data: {'name' :name, 'vlan' :vlan, 'ip' : ip, 'comment' : comment, 'category' :category,  'id':id},

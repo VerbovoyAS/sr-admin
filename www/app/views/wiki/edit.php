@@ -68,7 +68,7 @@ if(isset($_GET['action']) and $_GET['action'] == "edit"){
         var id = <?=$res[0]->id?>;
         var mess = 'OK';
         $.ajax({
-            url: 'http://localhost/ajax/editWiki', 
+            url: '/ajax/editWiki', 
             type: 'POST',
             cache: false,
             data: {'name' :name, 'host' :host, 'login' : login, 'pass' : pass, 'category' :category,  'id':id},
