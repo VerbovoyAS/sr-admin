@@ -96,7 +96,7 @@ if($_GET['url'] == ''){
                        
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/Listsrv">
+                        <a class="nav-link" href="/ListSrv">
                             <img src="/frontend/include/images/icon/align-justify.svg" width="24" height="24">
                             List
                         </a>
@@ -132,7 +132,7 @@ if($_GET['url'] == ''){
                     <?php if(strripos($_GET['url'], 'wiki') !== false):?>
                         <a href="/Wiki/add" class="btn btn-success">Add</a>
                     <?php elseif(strripos($_GET['url'], 'listsrv') !== false):?>
-                        <a href="/Listsrv/add" class="btn btn-success">Add</a>    
+                        <a href="/ListSrv/add" class="btn btn-success">Add</a>    
                     <?php endif;?>
                     
                 </div>

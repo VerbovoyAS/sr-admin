@@ -1,6 +1,6 @@
 <?php 
 
-    class Listsrv extends Controller {
+    class ListSrv extends Controller {
         
         public function index($type = '') {
             $net = $this->model('Listtable');
