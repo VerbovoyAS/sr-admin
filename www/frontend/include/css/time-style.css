@@ -1,0 +1,39 @@
+.time.container-fluid {margin:0;padding:0;}
+.nightmode {
+    background-color:#007bff;
+    border-radius: 5px;
+    color:#fff;
+    text-shadow:1px 1px 1px black;
+}
+.time .daymode {
+    background-color: #87ceeb;
+    background-image: linear-gradient(to bottom left, #87ceeb 0%,#fff 100%);
+    color:#333;
+    text-shadow:1px 1px 10px white;
+}
+.time .clocktext {
+    display:block;
+    margin:0;
+    padding:1px 0 0 0;
+    text-align:center;
+    line-height:1.2;
+}
+.time #date {
+    font-size:1.7em;
+    padding-top:15px;
+}
+.time #time {
+    font-size:6em;
+    margin:1px 0 0 0;
+}
+.time #time span {
+    display:inline-block;
+    padding:0;
+    vertical-align: baseline;
+    text-align:left;
+    width: 2em;
+    margin:0 0 0 0.5em;
+    font-size:2rem;
+    line-height:2;
+    white-space:normal;
+}

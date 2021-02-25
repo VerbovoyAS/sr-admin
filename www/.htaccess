@@ -7,7 +7,7 @@ RewriteBase /
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php?url=$1
+RewriteRule ^(.*)$ index.php?url=$1 [QSA]
 
 ErrorDocument 401 /error/401.php
 ErrorDocument 403 /error/403.php

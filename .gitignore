@@ -1,2 +1,5 @@
 docker-compose.yml
 logs/apache2/**
+logs/mysql/*
+data/mysql/*
+www/app/lib/mysql.php
