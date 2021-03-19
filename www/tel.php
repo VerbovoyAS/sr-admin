@@ -5,7 +5,7 @@
 define('TELEGRAM_TOKEN', ' ');
 
 // сюда нужно вписать ваш внутренний айдишник
-define('TELEGRAM_CHATID', '163045668');
+define('TELEGRAM_CHATID', '');
 
 message_to_telegram('Привет!');
 
