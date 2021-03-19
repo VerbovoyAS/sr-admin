@@ -2,7 +2,7 @@
 <?php
 
 // сюда нужно вписать токен вашего бота
-define('TELEGRAM_TOKEN', '1421788769:AAH_VxWU1dspQGz-Lkh55bOcNw5VYThyp60');
+define('TELEGRAM_TOKEN', '');
 
 // сюда нужно вписать ваш внутренний айдишник
 define('TELEGRAM_CHATID', '163045668');
