@@ -51,7 +51,7 @@ if($_GET['url'] == ''){
             <nav id="sidebarMenu" class="col-md-2 col-lg-2 d-md-block bg-light sidebar collapse">
                 <div class="text-center">
                     <img src="/frontend/include/images/icon/person.png" alt="..." class="rounded-circle w-25 m-3">         
-                    <h3>Привет Юзер</h3> 
+                    <h3>Привет</h3> 
                 </div>
                 <div class="sidebar-sticky pt-2">
                     <ul class="nav flex-column">
