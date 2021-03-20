@@ -1,6 +1,6 @@
 <?php 
     // Connect Date Base
-    echo 'BD';
+    
 class DB {
     private static $_db = null;
     public $pass;
