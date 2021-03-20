@@ -7,7 +7,7 @@ define('TELEGRAM_TOKEN', '1421788769:AAH_VxWU1dspQGz-Lkh55bOcNw5VYThyp60');
 // сюда нужно вписать ваш внутренний айдишник
 define('TELEGRAM_CHATID', '163045668');
 
-message_to_telegram('Hello');
+message_to_telegram('https://api.telegram.org/bot1421788769:AAH_VxWU1dspQGz-Lkh55bOcNw5VYThyp60/sendMessage?chat_id=163045668&text=Hello%20World');
 function message_to_telegram($text)
 {
     $ch = curl_init();
