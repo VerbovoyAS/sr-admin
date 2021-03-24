@@ -1,7 +1,6 @@
 <?php
-// require_once 'app/lib/tel_connect.php';
-$tel_token = '1421788769:AAH_VxWU1dspQGz-Lkh55bOcNw5VYThyp60';
-$tel_chat_id = '163045668';
+require_once 'app/lib/tel_connect.php';
+
 // Токен вашего бота
 define('TELEGRAM_TOKEN', $tel_token);
 // Внутренний айдишник
@@ -24,6 +23,7 @@ function message_to_telegram($text)
         )
     );
     curl_exec($ch);
+
 }
 
 require_once 'app/lib/BD.php';
@@ -47,5 +47,4 @@ foreach($res as $mes){
     }
 }
 
-message_to_telegram('rfrfrfrf');
 ?>
