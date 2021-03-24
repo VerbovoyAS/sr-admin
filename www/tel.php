@@ -47,5 +47,5 @@ foreach($res as $mes){
     }
 }
 
-// message_to_telegram('[TESTTTT]');
+message_to_telegram('[TESTTTT]');
 ?>
