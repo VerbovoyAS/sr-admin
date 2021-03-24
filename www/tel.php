@@ -4,7 +4,7 @@ require_once 'app/lib/tel_connect.php';
 
 // Токен вашего бота
 define('TELEGRAM_TOKEN', $tel_token);
-
+echo $tel_token ."  ". $tel_chat_id;
 // Внутренний айдишник
 define('TELEGRAM_CHATID', $tel_chat_id);
 
@@ -35,18 +35,18 @@ $res = $result->fetchAll(PDO::FETCH_OBJ);
 var_dump($res);
 
 $time_local = date('Y-m-d\TH:i');
-
+$date = $time_local;
+$currentDate = strtotime($date);
+$futureDate = $currentDate+(60*60*10); 
+$time_local = date("Y-m-d\TH:i", $futureDate);
 echo 'Время локальное: '.$time_local.'<br>';
 
 foreach($res as $mes){
     
     if( $mes->time_alert_start < $time_local &&  $time_local < $mes->time_alert_end){
-        if($mes->telegram == 1){
-            message_to_telegram($mes->text);
-        }
-        
+        message_to_telegram($mes->text);   
     }
 }
 
-
+// message_to_telegram('[TESTTTT]');
 ?>

@@ -11,7 +11,6 @@ $_db = DB::getInstanse();
     if($login == 'admin' && $srv_password == 'admin'){
       
       setcookie('login', $login, time() + 3600 * 24 * 30, '/');
-      // echo "<script>self.location='/';</script>";
       header("Location: /");
     }else{
       $result = "<div class='alert alert-danger' role='alert'>Access is denied!!!</div>";

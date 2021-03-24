@@ -11,7 +11,7 @@ RUN apt-get -y update --fix-missing && \
     apt-get --no-install-recommends install -y apt-utils && \
     rm -rf /var/lib/apt/lists/*
 
-
+RUN echo "Asia/Vladivostok" > /config/etc/timezone
 # Install useful tools and install important libaries
 RUN apt-get -y update && \
     apt-get -y --no-install-recommends install nano wget \
@@ -78,3 +78,7 @@ RUN a2enmod rewrite headers
 
 # Cleanup
 RUN rm -rf /usr/src/*
+
+# ENV TZ=Asia/Vladivostok
+# RUN -v /etc/timezone:/etc/timezone -v /etc/localtime:/etc/localtime
+# Set the time zone
