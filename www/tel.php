@@ -1,13 +1,13 @@
-
 <?php
 
+require_once 'app/lib/tel_connect.php';
+
 // Токен вашего бота
-define('TELEGRAM_TOKEN', ' ');
+define('TELEGRAM_TOKEN', $tel_token);
 
-// сюда нужно вписать ваш внутренний айдишник
-define('TELEGRAM_CHATID', '');
+// Внутренний айдишник
+define('TELEGRAM_CHATID', $tel_chat_id);
 
-message_to_telegram('Hello');
 function message_to_telegram($text)
 {
     $ch = curl_init();
@@ -26,5 +26,27 @@ function message_to_telegram($text)
     );
     curl_exec($ch);
 }
+
+require_once 'app/lib/BD.php';
+$_db = DB::getInstanse();
+
+$result = $_db->query("SELECT * FROM `task` WHERE telegram = 1");
+$res = $result->fetchAll(PDO::FETCH_OBJ);
+var_dump($res);
+
+$time_local = date('Y-m-d\TH:i');
+
+echo 'Время локальное: '.$time_local.'<br>';
+
+foreach($res as $mes){
+    
+    if( $mes->time_alert_start < $time_local &&  $time_local < $mes->time_alert_end){
+        if($mes->telegram == 1){
+            message_to_telegram($mes->text);
+        }
+        
+    }
+}
+
 
 ?>

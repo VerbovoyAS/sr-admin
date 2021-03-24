@@ -29,6 +29,16 @@
             $this->view('ajax/addList');
             
         }
+
+        public function addTask() {
+            $this->view('ajax/addTask');
+            
+        }
+
+        public function editTask() {
+            $this->view('ajax/editTask');
+            
+        }
         
 
     }

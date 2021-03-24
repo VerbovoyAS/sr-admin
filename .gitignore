@@ -1,4 +1,6 @@
 docker-compose.yml
+connect.php
+tel_connect.php
 logs/apache2/**
 logs/mysql/*
 data/mysql/*
