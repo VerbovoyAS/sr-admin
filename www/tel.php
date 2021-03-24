@@ -4,7 +4,6 @@ require_once 'app/lib/tel_connect.php';
 
 // Токен вашего бота
 define('TELEGRAM_TOKEN', $tel_token);
-echo $tel_token ."  ". $tel_chat_id;
 // Внутренний айдишник
 define('TELEGRAM_CHATID', $tel_chat_id);
 
