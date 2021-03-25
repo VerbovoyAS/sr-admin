@@ -11,7 +11,7 @@ $time_alert_start = trim(htmlspecialchars($_POST['time_alert_start']));
 // прибовляем 60 секунд
 $date = $time_alert_start;
 $currentDate = strtotime($date);
-$futureDate = $currentDate+(60*2); 
+$futureDate = $currentDate+(60); 
 $time_alert_end = date("Y-m-d\TH:i", $futureDate);
 
 $_db = DB::getInstanse();
