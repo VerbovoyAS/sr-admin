@@ -35,7 +35,7 @@ foreach($res as $mes){
     if( $time_start < $time_local &&  $time_local < $mes->time_alert_end){
         $header = $mes->header;
         $text =  $mes->text;
-        $mess = '<b>'.$header.'</b>%0A'.$text;
+        $mess = '<b>НАПОМИНАНИЕ!</b>%0A%0A<b>'.$header.'</b>%0A'.$text;
         message_to_telegram($mess);     
     }
 }
