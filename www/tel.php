@@ -6,23 +6,11 @@ define('TELEGRAM_TOKEN', $tel_token);
 // Внутренний айдишник
 define('TELEGRAM_CHATID', $tel_chat_id);
 
-function message_to_telegram($text)
-{
-    $ch = curl_init();
-    curl_setopt_array(
-        $ch,
-        array(
-            CURLOPT_URL => 'https://api.telegram.org/bot' . TELEGRAM_TOKEN . '/sendMessage',
-            CURLOPT_POST => TRUE,
-            CURLOPT_RETURNTRANSFER => TRUE,
-            CURLOPT_TIMEOUT => 10,
-            CURLOPT_POSTFIELDS => array(
-                'chat_id' => TELEGRAM_CHATID,
-                'text' => $text,
-            ),
-        )
-    );
-    curl_exec($ch);
+function message_to_telegram($text){
+    $ch = curl_init('https://api.telegram.org/bot'.TELEGRAM_TOKEN.'/sendMessage?chat_id='.TELEGRAM_CHATID.'&parse_mode=HTML&text='.$text); 
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_exec($ch); 
+    curl_close($ch); 
 
 }
 
@@ -31,20 +19,19 @@ $_db = DB::getInstanse();
 
 $result = $_db->query("SELECT * FROM `task` WHERE telegram = 1");
 $res = $result->fetchAll(PDO::FETCH_OBJ);
-var_dump($res);
 
 $time_local = date('Y-m-d\TH:i');
 $date = $time_local;
 $currentDate = strtotime($date);
 $futureDate = $currentDate+(60*60*10); 
 $time_local = date("Y-m-d\TH:i", $futureDate);
-echo 'Время локальное: '.$time_local.'<br>';
 
-foreach($res as $mes){
-    
+
+foreach($res as $mes){  
     if( $mes->time_alert_start < $time_local &&  $time_local < $mes->time_alert_end){
-        message_to_telegram($mes->text);   
+        $header = $mes->header;
+        $text =  $mes->text;
+        $mess = '<b>'.$header.'</b>%0A'.$text;
+        message_to_telegram($mess);     
     }
 }
-
-?>
