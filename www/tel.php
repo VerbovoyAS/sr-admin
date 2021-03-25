@@ -27,8 +27,12 @@ $futureDate = $currentDate+(60*60*10);
 $time_local = date("Y-m-d\TH:i", $futureDate);
 
 
-foreach($res as $mes){  
-    if( $mes->time_alert_start < $time_local &&  $time_local < $mes->time_alert_end){
+foreach($res as $mes){ 
+    $dateStart = $mes->time_alert_start;
+    $currentDateStart = strtotime($dateStart);
+    $futureDateStart = $currentDateStart-(60); 
+    $time_start = date("Y-m-d\TH:i", $futureDateStart); 
+    if( $time_start < $time_local &&  $time_local < $mes->time_alert_end){
         $header = $mes->header;
         $text =  $mes->text;
         $mess = '<b>'.$header.'</b>%0A'.$text;
